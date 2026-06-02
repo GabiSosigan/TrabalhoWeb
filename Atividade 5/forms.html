@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+
+    <style>
+        /* Estilização do formulário */
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            font-size: 16px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        #enviar:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #enviar{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgb(70, 64, 64);
+            border-radius: 8px;
+            font-family: inherit;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input:focus {
+            border: 2px solid #717da0;
+            outline: none;
+        }
+
+        input:invalid {
+            border: 2px solid rgb(226, 59, 59);
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" autofocus><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"><br><br>
+
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data"><br><br>
+
+        <label for="curso">Curso:</label>
+        <select id="curso" name="curso"><br>
+            <option value="Engenharia de Software">Engenharia de Software</option>
+            <option value="Ciência da Computação">Ciência da Computação</option>
+            <option value="Outro">Outro</option>
+        </select><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="masculino" name="sexo" value="masculino">
+        <label for="masculino">Masculino</label><br>
+        <input type="radio" id="feminino" name="sexo" value="feminino">
+        <label for="feminino">Feminino</label><br>
+        <input type="radio" id="outro" name="sexo" value="outro">
+        <label for="outro">Outro</label><br><br>
+
+        <label for="interesses">Interesses:</label><br>
+        <input type="text" id="interesses" name="interesses"><br>
+
+        <label for="comentarios">Comentários:</label><br>
+        <input type="text" id="comentarios" name="comentarios"><br><br>
+
+        <label for="upload">Upload de Imagem:</label><br>
+        <input id="upload" type="file" name="upload"><br><br>
+
+        <input id="enviar" type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
