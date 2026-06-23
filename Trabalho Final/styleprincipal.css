@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #1a1d24;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: #a0a5b5;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 12px;
+    border-radius: 8px;
+    transition: 0.3s; 
+}
+
+.sidebar ul li a:hover, .sidebar ul li a.active {
+    color: #fff;
+    background-color: #343a40;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 40px;
+    width: calc(100% - 250px);
+}
+
+.introduction {
+    margin-top: 20px;
+}
+
+.contatos {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.contatos h2 {
+    margin-bottom: 25px;
+    font-size: 22px;
+}
+
+.contato-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.card-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 60px;
+}

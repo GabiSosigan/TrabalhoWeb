@@ -8,4 +8,6 @@ Atividade 4: Duas tabelas, cada uma com seu próprio html e css, com prints das 
 
 Atividade 5: Formulário seguindo os critérios da atividade, com css interno.
 
+Trabalho final: Portfólio, trabalho final da disciplina.
+
 Observação: O arquivo patins.html foi criado como link interno na Atividade 1, ele não possui estilização em css por não ser a página principal!
