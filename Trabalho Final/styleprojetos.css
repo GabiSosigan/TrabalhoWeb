@@ -3,6 +3,12 @@
     box-sizing: border-box;
 }
 
+h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #3dd4d6;
+}
+
 body {
     margin: 10px;
     padding: 0;
@@ -10,12 +16,7 @@ body {
     color: #ffffff;
 }
 
-h2 {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* --- Header e navegação --- */
+/* Header e navegação */
 
 header {
     text-align: center;
@@ -26,7 +27,6 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 40px;
     text-align: center;
     padding: 10px;
@@ -52,17 +52,23 @@ nav .active {
     color: #263849;
 }
 
-/* --- Conteúdo principal --- */
+/* Conteúdo principal */
 
 .main {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: stretch;
     margin-bottom: 20px;
+    gap: 20px;
     padding: 10px;
 }
 
-.intro {
+.main h1 {
+    color: #90f6d7;
+}
+
+.conteudo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -72,64 +78,78 @@ nav .active {
     margin-right: 20px;
 }
 
-.intro ul {
-    padding: 0;
-    margin: 15px 0 0 0;
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 1%;
-}
-
-.intro li {
-    background-color: #35bcbf;
-    color: #263849;
-    padding: 8px 15px;
-    border-radius: 50px;
-    font-size: 0.95rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-}
-
-/* --- Foto de perfil --- */
-
-.perfil {
+.projetos {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
     padding: 20px;
     background-color: #41506b;
     border-radius: 8px;
-    min-width: 200px;
+    margin-right: 20px;
 }
 
-.perfil img {
-    width: 200px;
-    height: 280px;
-    border-radius: 8px;
-    object-fit: cover;
+.desenhos {
+    column-count: 1;
+    column-gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.desenhos img {
+    width: 100%;
+    height: auto;
     margin-bottom: 15px;
+    break-inside: avoid;
+    border-radius: 8px;
     border: 3px solid #35bcbf;
 }
 
-.perfil h2 {
-    color: #90f6d7;
-    text-align: center;
-    margin: 5px 0;
+/* Zoom das imagens */
+
+.zoom {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
 }
 
-.perfil p {
-    text-align: center;
-    margin: 5px 0;
-    color: #ffffff;
+.ampliar {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-/* --- Estilização do rodapé --- */
+.botao-fechar {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.img-zoom {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.img-zoom:hover {
+    transform: scale(1.02);
+}
+
+/* Estilização do rodapé */
 
 .footer {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 40px;
     text-align: center;
     padding: 10px;
@@ -163,17 +183,15 @@ nav .active {
         padding: 0;
     }
 
-    .intro {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .perfil {
-        width: 100%;
+    @media (max-width: 600px) {
+        .galeria-pinterest {
+            column-count: 1;
+        }
     }
 
     .footer {
         gap: 15px;
         flex-direction: column;
     }
+
 }
